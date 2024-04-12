@@ -64,9 +64,8 @@ public class MenuBar extends JMenuBar{
 				JFileChooser fileChooser = new JFileChooser();
 				int userSelection = fileChooser.showSaveDialog(frame);
 				if(userSelection == fileChooser.APPROVE_OPTION) {
-					System.out.println(text.getText());
 					File file;
-					file = new File(fileChooser.getSelectedFile().getAbsolutePath()+".txt");
+					file = new File(fileChooser.getSelectedFile().getAbsolutePath());
 					try {
 						PrintWriter writer = new PrintWriter(file, "UTF-8");
 						writer.println(text.getText());
